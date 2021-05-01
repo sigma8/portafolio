@@ -1,24 +1,36 @@
 {% extends 'base.html' %}
-
+{% block title %} Contact {% endblock %}
 {% block content %}
 {% if name %}
   <h1>Gracias {{ name }} por contactarme</h1>
 {% else %}
   <h1>Contactarme</h1>
-  <form method="POST">
-    {{ form.hidden_tag() }}
-    {{ form.name.label(class="form-label") }}
-    {{ form.name(class="form-control") }}
-    <br/>
-    {{ form.hidden_tag() }}
-    {{ form.email.label(class="form-label") }}
-    {{ form.email(class="form-control") }}
-    <br/>
-    {{ form.hidden_tag() }}
-    {{ form.mensaje.label(class="form-label") }}
-    {{ form.mensaje(class="form-control") }}
-    <br/>
-    {{ form.submit(class="btn btn-warning") }}
-
+  <form action="" method="POST">
+        <div class="form-name">
+          {{ form.hidden_tag() }}
+          {{ form.name.label() }}
+          <br>
+          {{ form.name() }}
+        </div>
+        <div class="form-subject">
+          {{ form.hidden_tag() }}
+          {{ form.subject.label() }}
+          <br>
+          {{ form.subject() }}
+        </div>
+        <div class="form-email">
+          {{ form.hidden_tag() }}
+          {{ form.email.label() }}
+          <br>
+          {{ form.email() }}
+        </div>
+        <div class="form-message">
+          {{ form.hidden_tag() }}
+          {{ form.message.label() }}
+          <br>
+          {{ form.message() }}
+        </div>
+        {{ form.submit() }}
+  </form>
 {% endif %}
 {% endblock %}

@@ -2,28 +2,35 @@ from app import app
 from flask import render_template
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField
-from wtforms.validators import DataRequired
+from wtforms.validators import DataRequired, Email, Length
+
+
 
 class ContactForm(FlaskForm):
-    name = StringField("Nombre", validators=[DataRequired()])
-    email = StringField("Email", validators=[DataRequired()])
-    mensaje = StringField("Mensaje", validators=[DataRequired()])
+    name = StringField("Name:", validators=[DataRequired()])
+    subject = StringField("Subject:", validators=[DataRequired()])
+    email = StringField("Email:", validators=[DataRequired(), Email(), Length(max=120)])
+    message = StringField("Message:", validators=[DataRequired()])
     submit = SubmitField("Submit")
 
+
+#creando una ruta hacia index.html
 @app.route('/')
 def index():
     return render_template("/index.html")
 
-#localhost:500/user/name
-@app.route('/user/<name>')
-def user(name):
-    return render_template("user.html", name=name)
+#creando una ruta hacia about.html
+@app.route('/about')
+def about():
+    return render_template("about.html")
 
-#contact page
+#creando una ruta hacia resume.html
 
-@app.route('/cv')
-def cv():
-    return render_template("cv.html")
+@app.route('/resume')
+def resume():
+    return render_template("resume.html")
+
+
 #Pagina error personalizada error 404 y 500
 @app.errorhandler(404)
 def page_not_found(e):
@@ -33,18 +40,27 @@ def page_not_found(e):
 def page_not_found(e):
     return render_template("500.html"), 500
 
+@app.route('/blog')
+def blog():
+    return render_template("blog.html")
+
+
+#creando una ruta hacia contact.html
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
     name = None
+    subject = None
     email = None
-    mensaje = None
+    message = None
     form = ContactForm()
     if form.validate_on_submit():
         name = form.name.data
+        subject =form.subject.data
         email = form.email.data
-        mensaje = form.mensaje.data
+        message = form.message.data
         form.name.data = ''
+        form.subject.data = ''
         form.email.data = ''
-        form.mensaje.data = ''
+        form.message.data = ''
 
-    return render_template("contact.html", name=name, email=email, mensaje=mensaje, form=form)
+    return render_template("contact.html", name=name, subject=subject, email=email, message=message, form=form)
