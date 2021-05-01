@@ -6,31 +6,32 @@
 {% else %}
   <h1>Contactarme</h1>
   <form action="" method="POST">
-        <div class="form-name">
-          {{ form.hidden_tag() }}
-          {{ form.name.label() }}
-          <br>
-          {{ form.name() }}
-        </div>
-        <div class="form-subject">
-          {{ form.hidden_tag() }}
-          {{ form.subject.label() }}
-          <br>
-          {{ form.subject() }}
-        </div>
-        <div class="form-email">
-          {{ form.hidden_tag() }}
-          {{ form.email.label() }}
-          <br>
-          {{ form.email() }}
-        </div>
-        <div class="form-message">
-          {{ form.hidden_tag() }}
-          {{ form.message.label() }}
-          <br>
-          {{ form.message() }}
-        </div>
-        {{ form.submit() }}
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <div class="form-name">
+      {{ form.hidden_tag() }}
+      {{ form.name.label() }}
+      <br>
+      {{ form.name() }}
+    </div>
+    <div class="form-subject">
+      {{ form.hidden_tag() }}
+      {{ form.subject.label() }}
+      <br>
+      {{ form.subject() }}
+    </div>
+    <div class="form-email">
+      {{ form.hidden_tag() }}
+      {{ form.email.label() }}
+      <br>
+      {{ form.email() }}
+    </div>
+    <div class="form-message">
+      {{ form.hidden_tag() }}
+      {{ form.message.label() }}
+      <br>
+      {{ form.message() }}
+    </div>
+    {{ form.submit() }}
   </form>
 {% endif %}
 {% endblock %}
