@@ -1,6 +1,6 @@
 from app import app
 from flask import render_template
-import forms
+from .forms import ContactForm
 
 
 #creando una ruta hacia index.html
@@ -41,7 +41,7 @@ def contact():
     subject = None
     email = None
     message = None
-    form = forms.ContactForm()
+    form = ContactForm()
     if form.validate_on_submit():
         name = form.name.data
         subject =form.subject.data

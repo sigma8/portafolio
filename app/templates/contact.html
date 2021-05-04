@@ -6,7 +6,7 @@
 {% else %}
   <h1>Contactarme</h1>
   <form action="" method="POST">
-    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
     <div class="form-name">
       {{ form.hidden_tag() }}
       {{ form.name.label() }}
@@ -31,6 +31,7 @@
       <br>
       {{ form.message() }}
     </div>
+    <br>
     {{ form.submit() }}
   </form>
 {% endif %}
