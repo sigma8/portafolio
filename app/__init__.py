@@ -11,6 +11,6 @@ app.config.from_pyfile('config.py')
 db = SQLAlchemy(app) # Inicializando el Database handler SQLAlchemy
 
 
-#csrf = CsrfProtect(app) # Creando una instancia para CSRF para mi formulario
+csrf = CsrfProtect(app) # Creando una instancia para CSRF para mi formulario
 
 from app import views
