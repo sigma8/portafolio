@@ -1,11 +1,14 @@
-from app import app
+from app import app, db
 from flask import render_template
 from .forms import ContactForm
+from .models import Contact
+
 
 
 #creando una ruta hacia index.html
 @app.route('/')
 def index():
+    print(app.config)
     return render_template("/index.html")
 
 #creando una ruta hacia about.html
@@ -43,13 +46,15 @@ def contact():
     message = None
     form = ContactForm()
     if form.validate_on_submit():
-        name = form.name.data
-        subject =form.subject.data
-        email = form.email.data
-        message = form.message.data
+        #user = test.query.filter_by(email=form.email.data).first()
+        contacto = Contact(name=form.name.data,
+                        subject=form.subject.data,
+                        email = form.email.data,
+                        message = form.message.data)
+        db.session.add(contacto)
+        db.session.commit()
         form.name.data = ''
         form.subject.data = ''
         form.email.data = ''
         form.message.data = ''
-
     return render_template("contact.html", name=name, subject=subject, email=email, message=message, form=form)
