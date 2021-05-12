@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_wtf import CsrfProtect
 from flask_sqlalchemy import SQLAlchemy
-from datetime import datetime
+
 
 
 app = Flask(__name__, instance_relative_config=True)

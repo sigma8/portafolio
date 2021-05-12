@@ -1,40 +1,83 @@
 html, body {
   padding: 0px;
   margin: 0px;
-  background-color: gray;
-  font-size: 12px;
-  font-family: sans-serif;
+  background-color: white;
+  font-size: 1.3em;
+  font-family: 'Roboto', sans-serif;
 }
 
 nav {
   display: flex;
-  background-color: lightgray;
-  color: orange;
+  background-color: white;
+  border-bottom: 1px solid;
+  border-color: lightgray;
+  color: black;
   padding: 10px;
   justify-content: space-between;
   align-items: center;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+
 
 }
-
-nav div a {
-  color: orange;
-  text-decoration: none;
-}
-
-nav ul {
+/* navbar */
+nav .home {
   display: flex;
+  align-items: center;
 }
-
-nav li {
-  padding-left: 10px;
-  list-style: none;
+nav .nav-brand {
+  color: white;
+  padding: 8px;
+  background-color: red;
+  border-radius: 5px;
+  font-weight: bold;
 }
-
-nav li a {
-  color: orange;
+nav .nav-brand:hover {
+  color: black;
+  background-color: white;
+}
+nav div a {
   text-decoration: none;
 }
-nav li a:hover {
-  color: white;
+
+/* main content*/
+div .spacer {
+  line-height: 120px!important;
+}
+h1 {
+  padding-bottom: 10px;
+  font-size: 2.7em; /*1908/40=47,7 */
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 auto;
+  letter-spacing: -1px;
+}
+div .subtitle {
+  padding: 10px;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/*footer*/
+.container {
+  font-size: 0.5em;
+  text-align: center;
+
+}
+div .icons {
+  display: flex;
+
+}
+div .github {
+  padding: 10px;
+}
+
+div .linkedin {
+  padding: 10px;
+}
+
+div .instagram {
+  padding: 10px;
 }
