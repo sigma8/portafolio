@@ -20,7 +20,7 @@ nav {
 
 
 }
-/* navbar */
+/*-------------navbar----------------*/
 nav .home {
   display: flex;
   align-items: center;
@@ -40,7 +40,7 @@ nav div a {
   text-decoration: none;
 }
 
-/* main content*/
+/*-------------home----------------*/
 div .spacer {
   line-height: 120px!important;
 }
@@ -60,10 +60,8 @@ div .subtitle {
   text-align: center;
 }
 
-/*footer*/
-.container {
-  font-size: 0.5em;
-  text-align: center;
+/*-------------footer----------------*/
+
 
 }
 div .icons {
@@ -82,7 +80,7 @@ div .instagram {
   padding: 10px;
 }
 
-/*Resume*/
+/*-------------Resume----------------*/
 
 div .resume {
 
@@ -105,4 +103,29 @@ div h3 {
 }
 div h4 {
   padding: 10px;
+}
+
+/*-------------Contactform----------------*/
+
+label {
+  max-width: -webkit-max-content;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 10px;
+  background: red;
+  color: white;
+
+
+}
+input {
+
+  width: 100%;
+}
+
+textarea {
+  
+  height: 120px;
+  width: 100%;
 }

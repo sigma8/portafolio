@@ -1,0 +1,56 @@
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.row {
+  display:flex;
+}
+.col-1 {
+  width: 8,333333333333333%;
+}
+.col-2 {
+  width: 16,666666666666667%;
+}
+.col-3 {
+  width: 24,999999999999999%;
+}
+.col-4 {
+  width: 33,333333333333332%;
+}
+.col-5 {
+  width: 41,666666666666665%;
+}
+.col-6 {
+  width: 49,9999999999999998%;
+}
+.col-7 {
+  width: 58,3333333333333331%;
+}
+.col-8 {
+  width: 66,6666666666666661%;
+}
+.col-9 {
+  width: 74,9999999999999991%;
+}
+.col-10 {
+  width: 83,3333333333333321%;
+}
+.col-11 {
+  width: 91,6666666666666654%;
+}
+.col-12 {
+  width: 100%;
+}
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+  padding: 10px;
+}
+
+media (max-width: 1200px) {
+  .row {
+    display: inherit;
+  }
+  .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10 .col-11, .col-12 {
+    width: 100%;
+  }
+}
