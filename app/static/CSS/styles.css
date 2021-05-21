@@ -1,15 +1,28 @@
 html, body {
   padding: 0px;
   margin: 0px;
-  background-color: #1394f2;
   font-size: 1.3em;
   font-family: 'PT Serif', serif;
+  background-color: whitesmoke;
+  }
 
+div .spacer {
+  line-height: 120px!important;
+}
+
+h2 {
+  text-transform: uppercase;
+  text-align: center;
+  color:  black;
+  font-weight: bold;
+  padding-left: 5px;
+  background-color: whitesmoke;
+  border-radius: 5px;
 }
 
 nav {
   display: flex;
-  background-color: #f1e401;
+  background-color: black;
   border-bottom: 1px solid;
   border-color: lightgray;
   color: black;
@@ -18,34 +31,34 @@ nav {
   align-items: center;
   font-family: 'PT Serif', serif;
   text-transform: uppercase;
-
-
 }
+
 /*-------------navbar----------------*/
+
 nav .home {
   display: flex;
   align-items: center;
-
 }
+
 nav .nav-brand {
-  color: #f1e401;
+  color: whitesmoke;
   padding: 8px;
-  background-color: #1394f2;
+  /*background-color: #1394f2;*/
   border-radius: 5px;
   font-weight: bold;
 }
+
 nav .nav-brand:hover {
   color: black;
-  background-color: #f1e401;
+  background-color: whitesmoke;
 }
+
 nav div a {
   text-decoration: none;
 }
 
 /*-------------home----------------*/
-div .spacer {
-  line-height: 120px!important;
-}
+
 h1 {
   padding-bottom: 10px;
   font-size: 2.7em; /*1908/40=47,7 */
@@ -54,8 +67,10 @@ h1 {
   text-align: center;
   margin: 0 auto;
   letter-spacing: -1px;
-  color: #f1e401;
+  color: #97bbe8;
+  background-color: black;
 }
+
 div .subtitle {
   padding: 10px;
   font-weight: 300;
@@ -67,10 +82,9 @@ div .subtitle {
 footer {
   text-align: center;
   font-size: 15px;
-  background-color: #f1e401;
-}
 
-}
+  }
+
 div .icons {
   display: flex;
 
@@ -95,23 +109,15 @@ div .resume {
   padding-right: 35%;
 }
 
-h2 {
-  color:  #9d0002;
-  font-weight: bold;
-  padding-left: 5px;
-  background-color: #f1e401;
-  border-radius: 5px;
-}
+
 
 div h3 {
-  color: #f1e401;
+  color: black;
   border-bottom: 1px solid;
   border-color: #9d0002;
   font-weight: bold;
 }
-div h4 {
 
-}
 
 /*-------------Contactform----------------*/
 
@@ -122,8 +128,8 @@ label {
   border-radius: 5px;
   padding-left: 5px;
   padding-right: 10px;
-  background: #f1e401;
-  color: #9d0002;
+
+  color: black;
 }
 input {
 
@@ -136,11 +142,20 @@ textarea {
   width: 100%;
 }
 
+div .contact {
+ background-color: lightgray;
+ border: 10px solid;
+ border-radius: 5px;
+ border-color: lightgray;
+}
+div .submit {
+  text-align: center;
+}
 #submit {
   margin: 10px;
   border-radius: 5px;
-
-  background: #f1e401;
-  color: #9d0002;
+  text-align: center;
+  background: whitesmoke;
+  color: black;
   width: 50%;
 }
