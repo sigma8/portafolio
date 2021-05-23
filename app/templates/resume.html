@@ -1,92 +1,131 @@
 {% extends 'base.html' %}
-
+{% block title %} resume {% endblock %}
 {% block content %}
-<div class="spacer">&nbsp;</div>
-<div class="spacer">&nbsp;</div>
-
 <div class="container">
 <h2>Resume</h2>
-  <div class="row">
-    <div class="col-1"></div>
-    <div class="col-10">
-<div class="contact">
-
-
-      <h3 class="group" >Studies</h3>
-      <br>
-      <div class="first">
-        <h3>Electrical Engineering</h3>
-        <p>February 2002-July 2009</p>
-        <h4>Electrical Engineer</h4>
-        <p>Universidad de Carabobo, Naguanagua, Venezuela.</p>
-        <br>
-        <h3>Linux Systems Administrator</h3>
-        <p>August 2020-Present</p>
-        <h4>Linux Professional Institute LPIC-1 certification</h4>
-        <p>Educación IT, Buenos Aires, Argentina.</p>
-        <br>
-      </div>
-        <h3 class="group" >Employment</h3>
-        <br>
-        <div class="first">
-          <h3>TMH Argentina S.A.</h3>
-          <p>February 2019-Present</p>
-          <h4>Specialized technician</h4>
-          <p>Maintenance of power and communications systems, lighting and ventilation control for the San Martin line trains.</p>
-          <br>
-        </div>
-        <div class="second">
-          <h3>Industria Avicola Mis Pollitos S.A. </h3>
-          <p>August 2015 – December 2017</p>
-          <h4>Coordination and planning maintenance manager</h4>
-          <p>Tool developer for coordination and planning of the maintenance program of the mechanicals, electrical and pneumatics systems of the plant.</p>
-          <br>
-        </div>
-        <div class="third">
-          <h3>TC Ingeniería C.A.</h3>
-          <p>January 2012 – June 2015</p>
-          <h4>General Manager</h4>
-          <p>Responsible for the general operations of the company.</p>
-          <br>
-        </div>
-        <h2 class="group" >Skills and knowledge</h2>
-        <br>
-        <div class="first">
-          <h3>Python</h3>
-          <p>Web design (Flask and Django framework, HTML, CSS), API integration, Python scripts development<p/>
-          <h3>Databases</h3>
-          <p>Management of MySQL, PostgreSQL, SQLite<p/>
-          <h3>Linux</h3>
-          <p>Install and maintain a Linux workstation (Debian and RedHat distributions), work at the Linux command line, handle files and access permissions and perform easy maintenance tasks.<p/>
-          <h3>Electrical Engineering</h3>
-          <p>Design of energy and power generation systems, design of industrial control and automation projects, technical project management and personnel management.<p/>
-          <br>
-        <h2>Other activities</h2>
-        <br>
-        <div class="fourth">
-          <h3>FEDEVIP (Federación Venezolana de Ícaros y Parapentes)</h3>
-          <p>January 2014- March 2017</p>
-          <h4>Score Keeper.</h4>
-          <p>Score keeper for the Venezuelan Federation of Hang Gliders and Paragliders championships.</p>
-          <br>
-        </div>
-        <div class="fifth">
-          <h3>FAI (Fédération Aéronautique Internationale)</h3>
-          <p>January 2014</p>
-          <h4>Meet Director Assistant</h4>
-          <p>Meet Director Assistant for the Paragliding Pre-Worlds in Roldanillo, Colombia.</p>
-          <br>
-        </div>
-        <div class="sixth">
-          <h3>PWCA (Paragliding World Cup Association)</h3>
-          <p>October 2017</p>
-          <h4>Event Director Assistant</h4>
-          <p>Event Director Assistant for the Paragliding World Cup in Guayaquil, Ecuador.</p>
+<section id="resume">
+      <!-- Education------------------------------------------------->
+      <div class="row">
+         <div class="col-3">
+            <h2><span>Education</span></h2>
+         </div>
+         <div class="col-9">
+            <div class="row item">
+               <div class="twelve columns">
+                  <h3>Electrical Engineering</h3>
+                  <p class="info">Universidad de Carabobo, Naguanagua, Venezuela</p>
+                  <p><em class="date">July 2009</em></p>
+                  <p>Electrical Engineer, specialized in power systems.</p>
+               </div>
+            </div> <!-- item end -->
+            <div class="row item">
+               <div class="twelve columns">
+                  <h3>Linux Systems Administrator</h3>
+                  <p class="info">Educación IT, Buenos Aires, Argentina</p>
+                  <p><em class="date">Present</em></p>
+                  <p>Linux Professional Institute LPIC-1 certification.</p>
+               </div>
+            </div> <!-- item end -->
+         </div> <!-- main-col end -->
+      </div> <!-- End Education -->
+      <!-- Work------------------------------------------------->
+      <div class="row">
+         <div class="col-3">
+            <h2><span>Work</span></h2>
+         </div>
+         <div class="col-9">
+            <div class="row item">
+               <div class="twelve columns">
+                  <h3>TMH Argentina S.A.</h3>
+                  <p class="info">Specialized technician</p>
+                  <p><em class="date">February 2019 - Present</em></p>
+                  <p>Maintenance of power and communications systems, lighting and ventilation control for the San Martin line trains.</p>
+               </div>
+            </div> <!-- item end -->
+            <div class="row item">
+               <div class="twelve columns">
+                  <h3>Industria Avicola Mis Pollitos S.A.</h3>
+                  <p class="info">Coordination and planning maintenance manager</p>
+                  <p><em class="date">August 2015 – December 2017</em></p>
+                  <p>Tool developer for coordination and planning of the maintenance program of the mechanicals, electrical and pneumatics systems of the plant.</p>
+               </div>
+            </div> <!-- item end -->
+            <div class="row item">
+               <div class="twelve columns">
+                  <h3>TC Ingeniería C.A.</h3>
+                  <p class="info">General Manager</p>
+                  <p><em class="date">January 2012 – June 2015</em></p>
+                  <p>Responsible for the general operations of the company.</p>
+               </div>
+            </div> <!-- item end -->
+          </div> <!-- main-col end -->
+        </div> <!-- End Work -->
+        <!-- Skills------------------------------------------------->
+        <div class="row">
+           <div class="col-3">
+              <h2><span>Skills</span></h2>
+           </div>
+        <div class="col-9">
+          <div class="row item">
+             <div class="twelve columns">
+                <h3>Python</h3>
+                <p class="info">
+                  Web design (Flask and Django framework, HTML, CSS), API integration,
+                  Python scripts development
+                </p>
+              </div>
+          </div> <!-- item end -->
+          <div class="row item">
+             <div class="twelve columns">
+                <h3>Databases</h3>
+                <p class="info">
+                  Management of SQL(MySQL, PostgreSQL, SQLite) and NoSQL(MongoDB)</p>
+              </div>
+          </div> <!-- item end -->
+          <div class="row item">
+             <div class="twelve columns">
+                <h3>Linux</h3>
+                <p class="info">
+                  Install and maintain a Linux workstation (Debian and RedHat distributions),
+                  work at the Linux command line, handle files and access permissions and
+                  perform easy maintenance tasks.
+                </p>
+              </div>
+          </div> <!-- item end -->
+        </div> <!-- main-col end -->
+      </div> <!-- End Skills -->
+      <!-- othe activities------------------------------------------------->
+      <div class="row">
+         <div class="col-3">
+            <h2><span>Other activities</span></h2>
+         </div>
+         <div class="col-9">
+            <div class="row item">
+               <div class="twelve columns">
+                  <h3>FEDEVIP (Federación Venezolana de Ícaros y Parapentes)</h3>
+                  <p class="info">Score Keeper</p>
+                  <p><em class="date">anuary 2014 - March 2017</em></p>
+                  <p>Score keeper for the Venezuelan Federation of Hang Gliders and Paragliders championships.</p>
+               </div>
+            </div> <!-- item end -->
+            <div class="row item">
+               <div class="twelve columns">
+                  <h3>FAI (Fédération Aéronautique Internationale)</h3>
+                  <p class="info">Meet Director Assistant</p>
+                  <p><em class="date">January 2014</em></p>
+                  <p>Meet Director Assistant for the Paragliding Pre-Worlds in Roldanillo, Colombia.</p>
+               </div>
+            </div> <!-- item end -->
+            <div class="row item">
+               <div class="twelve columns">
+                  <h3>PWCA (Paragliding World Cup Association)</h3>
+                  <p class="info">Meet Director Assistant</p>
+                  <p><em class="date">October 2017</em></p>
+                  <p>Event Director Assistant for the Paragliding World Cup in Guayaquil, Ecuador</p>
+               </div>
+            </div> <!-- item end -->
+          </div> <!-- main-col end -->
+        </div> <!-- End Other activities -->
+</section>
 </div>
-    </div>
-    <div class="col-1"></div>
-  </div>
-
-</div>
-
 {% endblock %}

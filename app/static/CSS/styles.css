@@ -3,7 +3,7 @@ html, body {
   margin: 0px;
   font-size: 1.3em;
   font-family: 'PT Serif', serif;
-  background-color: whitesmoke;
+  background-color: #E3E8EC;
   }
 
 div .spacer {
@@ -13,16 +13,19 @@ div .spacer {
 h2 {
   text-transform: uppercase;
   text-align: center;
-  color:  black;
+  color:  #34495e;
   font-weight: bold;
   padding-left: 5px;
-  background-color: whitesmoke;
+  background-color: #E3E8EC;
   border-radius: 5px;
 }
 
+p {
+  color: gray;
+}
 nav {
   display: flex;
-  background-color: black;
+  background-color: #34495e;
   border-bottom: 1px solid;
   border-color: lightgray;
   color: black;
@@ -41,7 +44,7 @@ nav .home {
 }
 
 nav .nav-brand {
-  color: whitesmoke;
+  color: #E3E8EC;
   padding: 8px;
   /*background-color: #1394f2;*/
   border-radius: 5px;
@@ -49,12 +52,16 @@ nav .nav-brand {
 }
 
 nav .nav-brand:hover {
-  color: black;
-  background-color: whitesmoke;
+  color: #34495e;
+  background-color: #E3E8EC;
 }
 
 nav div a {
   text-decoration: none;
+
+}
+.nav-link {
+  color: #E3E8EC;
 }
 
 /*-------------home----------------*/
@@ -67,7 +74,7 @@ h1 {
   text-align: center;
   margin: 0 auto;
   letter-spacing: -1px;
-  color: #97bbe8;
+  color: #34495e;
   background-color: black;
 }
 
@@ -82,80 +89,86 @@ div .subtitle {
 footer {
   text-align: center;
   font-size: 15px;
+  background-color: #2C3E50;
 
   }
-
 div .icons {
   display: flex;
-
 }
 div .github {
   padding: 10px;
 }
-
 div .linkedin {
   padding: 10px;
 }
-
 div .instagram {
   padding: 10px;
 }
 
 /*-------------Resume----------------*/
 
-div .resume {
-
+div .resume-resume {
   padding-left: 10%;
   padding-right: 35%;
+  padding: 10px;
+  background-color: #537778;
+  border: 10px solid;
+  border-radius: 5px;
+  border-color: #537778;
 }
-
-
-
 div h3 {
   color: black;
-  border-bottom: 1px solid;
-  border-color: #9d0002;
   font-weight: bold;
 }
+#resume h2 {
+    font: 18px/24px 'PT Serif', serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: right;
+    letter-spacing: 1px;
+}
 
+#resume h2 span {
 
+    border-bottom: 3px solid #2C3E50;
+    padding-bottom: 6px;
+}
+#resume h3 {
+    font: 25px/30px 'PT Serif', serif;
+}
+
+.education, .work, .skill {
+    margin-bottom: 48px;
+    padding-bottom: 24px;
+
+}
+
+.row {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 0px;
+}
 /*-------------Contactform----------------*/
 
 label {
   max-width: -webkit-max-content;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  border-radius: 5px;
-  padding-left: 5px;
-  padding-right: 10px;
-
-  color: black;
+  border-bottom: 3px solid #2C3E50;
+  padding-bottom: 6px;
+  color: #34495e;
+  text-transform: uppercase;
+}
+form .col-3 {
+  font: 18px/24px 'PT Serif', serif;
+  font-size: 24px;
+  text-align: right;
+  letter-spacing: 1px;
 }
 input {
-
   width: 100%;
 }
 
 textarea {
-
-  height: 120px;
+  height: 10em;
   width: 100%;
-}
-
-div .contact {
- background-color: lightgray;
- border: 10px solid;
- border-radius: 5px;
- border-color: lightgray;
-}
-div .submit {
-  text-align: center;
-}
-#submit {
-  margin: 10px;
-  border-radius: 5px;
-  text-align: center;
-  background: whitesmoke;
-  color: black;
-  width: 50%;
 }

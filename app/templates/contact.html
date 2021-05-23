@@ -1,60 +1,93 @@
 {% extends 'base.html' %}
-{% block title %} Contact {% endblock %}
+{% block title %} contact {% endblock %}
 {% block content %}
-
-<form action="" method="POST">
-<input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
-  <div class="spacer">&nbsp;</div>
-  <div class="spacer">&nbsp;</div>
-
-  <div class="container">
-    <h2>Contact me</h2>
-    <div class="row">
-      <div class="col-3"></div>
-
-      <div class="col-6">
-        <div class="contact">
-
-
-        <div class="label">
-          {{ form.hidden_tag() }}
-          {{ form.name.label() }}
-        </div>
-        <div class="input">
-          {{ form.name() }}
-        </div>
-        <div class="label">
-          {{ form.hidden_tag() }}
-          {{ form.subject.label() }}
-        </div>
-        <div class="input">
-          {{ form.subject() }}
-        </div>
-        <div class="label">
-          {{ form.hidden_tag() }}
-          {{ form.email.label() }}
-        </div>
-        <div class="input">
-          {{ form.email() }}
-        </div>
-        <div class="label">
-          {{ form.hidden_tag() }}
-          {{ form.message.label() }}
-        </div>
-        <div class="input-message">
-          {{ form.message() }}
-        </div>
-
-        </div>
-        <div class="submit">
-          {{ form.submit() }}
+<div class="container">
+<h2>Contact me</h2>
+<section id=form>
+<form action="/action_page.php" method="POST">
+  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+      <div class="form-group">
+        <!-- Name------------------------------------------------->
+        <div class="row">
+          <div class="col-3">
+            {{ form.hidden_tag() }}
+            {{ form.name.label() }}
+          </div>
+          <div class="col-9">
+            <div class="row item">
+               <div class="twelve columns">
+                 {{ form.name() }}
+              </div>
+            </div> <!-- item end -->
+          </div> <!-- main-col end -->
         </div>
       </div>
-      <div class="col-3"></div>
-    </div>
+      <div class="form-group">
+        <!-- subject------------------------------------------------->
+        <div class="row">
+          <div class="col-3">
+            {{ form.hidden_tag() }}
+            {{ form.subject.label() }}
+          </div>
+          <div class="col-9">
+            <div class="row item">
+               <div class="twelve columns">
+                 {{ form.subject() }}
+               </div>
+             </div> <!-- item end -->
+          </div> <!-- main-col end -->
+        </div>
+      </div>
+      <div class="form-group">
+        <!-- Email------------------------------------------------->
+        <div class="row">
+          <div class="col-3">
+            {{ form.hidden_tag() }}
+            {{ form.email.label() }}
+          </div>
+          <div class="col-9">
+            <div class="row item">
+               <div class="twelve columns">
+                 {{ form.email() }}
+               </div>
+             </div> <!-- item end -->
+          </div> <!-- main-col end -->
+        </div>
+      </div>
+      <div class="form-group">
+        <!-- message------------------------------------------------->
+        <div class="row">
+          <div class="col-3">
+            {{ form.hidden_tag() }}
+            {{ form.message.label() }}
+          </div>
+          <div class="col-9">
+            <div class="row item">
+               <div class="twelve columns">
+                 {{ form.message() }}
+               </div>
+             </div> <!-- item end -->
+          </div> <!-- main-col end -->
+        </div>
+      </div>
+      <!-- submit------------------------------------------------->
+      <div class="form-group">
+        <div class="row">
+          <div class="col-3"></div>
+          <div class="col-9">
+            <div class="row item">
+             <div class="twelve columns">
+               <button type="button " class="btn btn-lg">{{ form.submit() }}</button>
+             </div>
+           </div> <!-- item end -->
+         </div> <!-- main-col end -->
+        </div>
+      </div>
+  </form>
+</section>
 </div>
 
-</form>
+
 
 
 {% endblock %}
