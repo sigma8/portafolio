@@ -1,5 +1,5 @@
 from app import app, db
-from flask import render_template
+from flask import render_template, send_file, send_from_directory, safe_join, abort
 from .forms import ContactForm
 from .models import Contact
 
@@ -21,6 +21,14 @@ def about():
 @app.route('/resume')
 def resume():
     return render_template("resume.html")
+
+@app.route("/get-pdf")
+def get_pdf():
+    filename = "CV_José_Gabriel_Tortolero_2021.pdf"
+    try:
+        return send_from_directory(app.config['CLIENT_PDF'], filename=filename, as_attachment=True)
+    except FileNotFoundError:
+        abort(404)
 
 
 #Pagina error personalizada error 404 y 500
