@@ -1,11 +1,14 @@
 {% extends 'base.html' %}
 {% block title %} contact {% endblock %}
 {% block content %}
+{% if name %}
+<h2>Thank you {{ name }} for contact me </h2>
+{% else %}
 <div class="container">
-<h2>Contact me</h2>
-<section id=form>
-<form action="/action_page.php" method="POST">
-  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+  <h2>Contact me</h2>
+  <section id=form>
+    <form method="POST">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
       <div class="form-group">
         <!-- Name------------------------------------------------->
         <div class="row">
@@ -15,8 +18,8 @@
           </div>
           <div class="col-9">
             <div class="row item">
-               <div class="twelve columns">
-                 {{ form.name() }}
+              <div class="twelve columns">
+                {{ form.name() }}
               </div>
             </div> <!-- item end -->
           </div> <!-- main-col end -->
@@ -31,10 +34,10 @@
           </div>
           <div class="col-9">
             <div class="row item">
-               <div class="twelve columns">
-                 {{ form.subject() }}
-               </div>
-             </div> <!-- item end -->
+              <div class="twelve columns">
+                {{ form.subject() }}
+              </div>
+            </div> <!-- item end -->
           </div> <!-- main-col end -->
         </div>
       </div>
@@ -47,10 +50,10 @@
           </div>
           <div class="col-9">
             <div class="row item">
-               <div class="twelve columns">
-                 {{ form.email() }}
-               </div>
-             </div> <!-- item end -->
+              <div class="twelve columns">
+                {{ form.email(placeholder='name@mail.com') }}
+              </div>
+            </div> <!-- item end -->
           </div> <!-- main-col end -->
         </div>
       </div>
@@ -63,10 +66,10 @@
           </div>
           <div class="col-9">
             <div class="row item">
-               <div class="twelve columns">
-                 {{ form.message() }}
-               </div>
-             </div> <!-- item end -->
+              <div class="twelve columns">
+                {{ form.message() }}
+              </div>
+            </div> <!-- item end -->
           </div> <!-- main-col end -->
         </div>
       </div>
@@ -76,18 +79,19 @@
           <div class="col-3"></div>
           <div class="col-9">
             <div class="row item">
-             <div class="twelve columns">
-               <button type="button " class="btn btn-lg">{{ form.submit() }}</button>
-             </div>
-           </div> <!-- item end -->
-         </div> <!-- main-col end -->
+              <div class="twelve columns">
+                <button type="button " class="btn btn-lg">{{ form.submit() }}</button>
+              </div>
+            </div> <!-- item end -->
+          </div> <!-- main-col end -->
         </div>
       </div>
-  </form>
-</section>
+    </form>
+  </section>
+
 </div>
 
 
 
-
+{% endif %}
 {% endblock %}

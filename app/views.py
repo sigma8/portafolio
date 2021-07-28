@@ -24,7 +24,7 @@ def resume():
 
 @app.route("/get-pdf")
 def get_pdf():
-    filename = "CV_José_Gabriel_Tortolero_2021.pdf"
+    filename = "cv_en_Jose_Tortolero.pdf"
     try:
         return send_from_directory(app.config['CLIENT_PDF'], filename=filename, as_attachment=True)
     except FileNotFoundError:
@@ -40,9 +40,9 @@ def page_not_found(e):
 def page_not_found(e):
     return render_template("500.html"), 500
 
-@app.route('/blog')
-def blog():
-    return render_template("blog.html")
+@app.route('/work')
+def work():
+    return render_template("work.html")
 
 
 #creando una ruta hacia contact.html
