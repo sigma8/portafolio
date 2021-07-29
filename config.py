@@ -10,7 +10,7 @@ class ProductionConfig(Config):
 
 class DevelopmentConfig(Config):
     DEBUG = True
-    
+    SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:4682@localhost:5432/portafolio'
 
 class TestingConfig(Config):
     TESTING = True
